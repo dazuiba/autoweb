@@ -20,3 +20,4 @@ CVS
 .cvsignore
 .DS_Store
 autoweb-0.0.1.gem
+doc/
