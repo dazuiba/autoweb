@@ -1,7 +1,8 @@
 # Welcome to Autoweb
 
-* 首先, Autoweb是一个程序包, 使用它能让更好地分析HTML中的数据: 你可以先使用Autoweb提供的DSL,针对HTML建模, 然后抓取数据
-* 其次, 它能把你写的抓取程序分享出来, 他人可以通过命令行或者web界面使用
+1. [Autoweb][homepage]能让更好地分析HTML中的数据
+ 	 你可以先使用Autoweb提供的DSL,针对HTML建模, 然后抓取数据
+2. 它能把你写的抓取程序分享出来, 他人可以通过命令行或者web界面使用
 
 ### 集成进来的工具
 1. baidu mp3 下载器
@@ -10,7 +11,7 @@
 
 下载 齐秦的大约在冬季, 在命令行输入:
 
- autoweb baidump3 "大约在冬季 齐秦" ~/Download/mp3
+	autoweb baidump3 "大约在冬季 齐秦" ~/Download/mp3
 
 autoweb会自动搜索歌曲, 然后下载到指定的目录
 
@@ -31,7 +32,7 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 ## Contributing
 
 ### 页面建模 
-用到了css3作为页面元素定位语法, 参照: [http://www.w3.org/TR/css3-selectors]
+用到了css3作为页面元素定位语法, 参照: [css3语法介绍][w3c-css3-selector]
 
 	Page.define "BaiduMp3" do |page|
     
@@ -56,7 +57,7 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 	link = first_mp3["music"]
 	puts link[:href]
 
-更多实际代码, 参考 commands/baidump3.rb 
+更多实际代码, 参考 [commands/baidump3.rb][baidump3-codeb] 
 
 ### 新建一个命令(和baidump3类似)
 
@@ -72,13 +73,19 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 
 直接运行 autoweb helloworld 即可
 
-更多实际代码, 参考 commands/help.rb 和 commands/baidump3.rb 
+更多实际代码, 参考 [commands/help.rb][help-code] 和 [commands/baidump3.rb][baidump3-code] 
 
-### 将代码提交到autoweb
+### 将代码提交到[autoweb][homepage]
 
    请直接fork github上的autoweb, 提交ticket以及push request即可
 
 ## License
 
 Autoweb released under the MIT license.
+
+[homepage]:http://dazuiba.github.com/autoweb
+[w3c-css3-selector]:http://wiki.github.com/mxcl/homebrew/installation
+[baidump3-code]:http://github.com/dazuiba/autoweb/blob/master/commands/baidump3.rb
+[help-code]:http://github.com/dazuiba/autoweb/blob/master/commands/help.rb
+
 
