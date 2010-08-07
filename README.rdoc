@@ -32,9 +32,8 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 
 1. 使用页面建模API
 
-#页面建模
-
- 用到了css3作为页面元素定位语法, 参照: [http://www.w3.org/TR/css3-selectors]
+h3. 页面建模 
+用到了css3作为页面元素定位语法, 参照: [http://www.w3.org/TR/css3-selectors]
 
 	Page.define "BaiduMp3" do |page|
     
@@ -52,7 +51,7 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 		end
 	end
 
-#使用页面对象:
+h3. 使用页面对象:
  
  page = Page.pages["BaiduMp3"].parse(:word=>"大约在冬季")
  first_mp3 = page["result"][1]
@@ -61,12 +60,22 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 
 更多实际代码, 参考 commands/baidump3.rb 
 
-2. 新建一个命令(和baidump3类似)
+h3. 新建一个命令(和baidump3类似)
 
+将以下代码放到autoweb/commands/helloworld.rb下
+	module Autoweb::Command
+		class HelloWorld < Base  
+			def index
+				display "hello world!"
+			end
+		end
+	end
+
+直接运行 autoweb helloworld 即可
 
 更多实际代码, 参考 commands/help.rb 和 commands/baidump3.rb 
 
-2. 将代码提交到autoweb
+h3. 将代码提交到autoweb
 
    请直接fork github上的autoweb, 提交ticket以及push request即可
 
