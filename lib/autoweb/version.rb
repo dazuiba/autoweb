@@ -1,0 +1,3 @@
+module Autoweb
+  VERSION = '0.0.1'
+end
