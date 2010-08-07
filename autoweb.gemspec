@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = %q{Automate the Internet. baidu music downloader}
   s.executables = %w(autoweb)
   
-  s.files = %w( README.rdoc )
+  s.files = %w( README.md )
   s.files += Dir.glob("lib/**/*")
   s.files += Dir.glob("commands/**/*")
   s.files += Dir.glob("bin/*")

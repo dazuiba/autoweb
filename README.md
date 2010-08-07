@@ -1,9 +1,9 @@
-== Welcome to Autoweb
+# Welcome to Autoweb
 
 * 首先, Autoweb是一个程序包, 使用它能让更好地分析HTML中的数据: 你可以先使用Autoweb提供的DSL,针对HTML建模, 然后抓取数据
-* 其次, 它也能把你写的抓取程序分享出来, 他人可以通过命令行或者web界面使用
+* 其次, 它能把你写的抓取程序分享出来, 他人可以通过命令行或者web界面使用
 
-== 现有的工具
+### 集成进来的工具
 1. baidu mp3 下载器
  
 使用举例:
@@ -15,7 +15,7 @@
 autoweb会自动搜索歌曲, 然后下载到指定的目录
 
 
-== Install Autoweb
+## Install Autoweb
 
 安装前需要安装以下工具:
 
@@ -28,11 +28,9 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
   gem install autoweb
 
 
-== Contributing
+## Contributing
 
-1. 使用页面建模API
-
-h3. 页面建模 
+### 页面建模 
 用到了css3作为页面元素定位语法, 参照: [http://www.w3.org/TR/css3-selectors]
 
 	Page.define "BaiduMp3" do |page|
@@ -51,18 +49,19 @@ h3. 页面建模
 		end
 	end
 
-h3. 使用页面对象:
+使用页面对象:
  
- page = Page.pages["BaiduMp3"].parse(:word=>"大约在冬季")
- first_mp3 = page["result"][1]
- link = first_mp3["music"]
- puts link[:href]
+	page = Page.pages["BaiduMp3"].parse(:word=>"大约在冬季")
+	first_mp3 = page["result"][1]
+	link = first_mp3["music"]
+	puts link[:href]
 
 更多实际代码, 参考 commands/baidump3.rb 
 
-h3. 新建一个命令(和baidump3类似)
+### 新建一个命令(和baidump3类似)
 
 将以下代码放到autoweb/commands/helloworld.rb下
+
 	module Autoweb::Command
 		class HelloWorld < Base  
 			def index
@@ -75,11 +74,11 @@ h3. 新建一个命令(和baidump3类似)
 
 更多实际代码, 参考 commands/help.rb 和 commands/baidump3.rb 
 
-h3. 将代码提交到autoweb
+### 将代码提交到autoweb
 
    请直接fork github上的autoweb, 提交ticket以及push request即可
 
-== License
+## License
 
 Autoweb released under the MIT license.
 
