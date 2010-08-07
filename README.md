@@ -57,7 +57,7 @@ autoweb会自动搜索歌曲, 然后下载到指定的目录
 	link = first_mp3["music"]
 	puts link[:href]
 
-更多实际代码, 参考 [commands/baidump3.rb][baidump3-codeb] 
+更多实际代码, 参考 [commands/baidump3.rb][baidump3-code] 
 
 ### 新建一个命令(和baidump3类似)
 
