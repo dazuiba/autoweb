@@ -9,9 +9,9 @@
  
 使用举例:
 
-下载 齐秦的大约在冬季, 在命令行输入:
+下载 齐秦的<外面的世界>, 在命令行输入:
 
-	autoweb baidump3 "大约在冬季 齐秦" ~/Download/mp3
+	autoweb baidump3 "外面的世界 齐秦" ~/Download/mp3
 
 autoweb会自动搜索歌曲, 然后下载到指定的目录
 
